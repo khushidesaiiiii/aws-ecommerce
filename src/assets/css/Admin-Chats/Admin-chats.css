@@ -1,0 +1,122 @@
+.admin-chats-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 28px 70px;
+}
+
+.admin-chats-page h2 {
+  margin: 0 0 34px;
+  font-size: 34px;
+  font-weight: 900;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.chat-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 26px;
+}
+
+.chat-cards > div {
+  background: var(--bg-white);
+  border-radius: 20px;
+  padding: 26px 24px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  min-height: 120px;
+  cursor: pointer;
+  transition: all 0.28s ease;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--border-light);
+}
+
+.chat-cards > div::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--primary-gradient);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  z-index: 0;
+}
+
+.chat-cards > div:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 26px 60px rgba(0, 0, 0, 0.18);
+}
+
+.chat-cards > div:hover::after {
+  opacity: 0.06;
+}
+
+.chat-cards img {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--bg-light);
+  border: 4px solid var(--bg-light);
+  flex-shrink: 0;
+  transition: border 0.25s ease;
+}
+
+.chat-cards > div:hover img {
+  border-color: rgba(106, 92, 255, 0.35);
+}
+
+.chat-cards h4 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--text-dark);
+}
+
+.chat-cards h6 {
+  margin: 4px 0 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+  word-break: break-all;
+}
+
+.chat-cards > div * {
+  position: relative;
+  z-index: 1;
+}
+
+.chat-empty {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 80px 0;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+@media (max-width: 600px) {
+  .admin-chats-page {
+    padding: 30px 16px 60px;
+  }
+
+  .admin-chats-page h2 {
+    font-size: 26px;
+  }
+
+  .chat-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .chat-cards > div {
+    min-height: 100px;
+    padding: 20px;
+  }
+
+  .chat-cards img {
+    width: 60px;
+    height: 60px;
+  }
+}

@@ -1,0 +1,275 @@
+.nav-bar {
+  width: 100%;
+  height: 90px;
+  padding: 0 60px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  background: var(--bg-white);
+  box-shadow: var(--shadow-soft);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  justify-self: start;
+}
+
+.logo a {
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.navlinks-center {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+}
+
+.navlinks-center a {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text-muted);
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.navlinks-center a:hover {
+  color: var(--primary-purple);
+}
+
+.navlinks-center a.active {
+  color: var(--primary-purple);
+}
+
+.navlinks-center a.active::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--primary-gradient);
+}
+
+.nav-user-section {
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.username {
+  max-width: 120px;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text-dark);
+  text-transform: capitalize;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 12px;
+}
+
+.nav-user-section button {
+  width: auto;
+  padding: 8px 16px;
+}
+
+@media (max-width: 1024px) {
+  .nav-bar {
+    padding: 0 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navlinks-center {
+    display: none;
+  }
+
+  .nav-bar {
+    padding: 0 20px;
+  }
+}
+
+.nav-cart-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.nav-cart-btn button {
+  position: relative;
+  width: 51px;
+  height: 51px;
+  border-radius: 50%;
+  border: none;
+  background: var(--bg-white);
+  color: var(--primary-purple);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: var(--shadow-soft);
+  transition: all 0.25s ease;
+  font-size: 18px;
+}
+
+.nav-cart-btn button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(106, 92, 255, 0.35);
+  background: var(--primary-gradient);
+  color: #fff;
+}
+
+.cart-count {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  border-radius: 50px;
+  background: var(--primary-gradient);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(106, 92, 255, 0.35);
+}
+
+.cart-count {
+  animation: cartPop 0.3s ease;
+}
+
+@keyframes cartPop {
+  0% { transform: scale(0.8); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+@media (max-width: 1024px) {
+  .nav-bar {
+    padding: 0 24px;
+    height: 80px;
+  }
+
+  .logo a {
+    font-size: 28px;
+  }
+
+  .navlinks-center {
+    gap: 20px;
+  }
+
+  .navlinks-center a {
+    font-size: 16px;
+  }
+
+  .username {
+    font-size: 15px;
+    max-width: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-bar {
+    padding: 0 16px;
+    height: 72px;
+    grid-template-columns: auto 1fr auto;
+  }
+
+  .logo a {
+    font-size: 24px;
+  }
+
+  .navlinks-center {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .navlinks-center a {
+    font-size: 14px;
+  }
+
+  .nav-user-section {
+    gap: 12px;
+  }
+
+  .username {
+    display: none;
+  }
+
+  .nav-cart-btn button {
+    width: 44px;
+    height: 44px;
+    font-size: 16px;
+  }
+
+  .cart-count {
+    font-size: 12px;
+    min-width: 18px;
+    height: 18px;
+    top: -4px;
+    right: -4px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-bar {
+    padding: 0 10px;
+    height: 66px;
+  }
+
+  .logo a {
+    font-size: 20px;
+  }
+
+  .navlinks-center {
+    gap: 10px;
+  }
+
+  .navlinks-center a {
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .nav-user-section {
+    gap: 8px;
+  }
+
+  .nav-cart-btn button {
+    width: 40px;
+    height: 40px;
+    font-size: 15px;
+  }
+
+  .cart-count {
+    font-size: 11px;
+    min-width: 16px;
+    height: 16px;
+  }
+}
+
+@media (max-width: 360px) {
+  .navlinks-center {
+    gap: 6px;
+  }
+
+  .navlinks-center a {
+    font-size: 11px;
+  }
+
+  .logo a {
+    font-size: 18px;
+  }
+}

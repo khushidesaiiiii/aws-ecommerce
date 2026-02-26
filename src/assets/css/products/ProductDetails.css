@@ -1,0 +1,210 @@
+.product-details-page button{
+  margin: 50px 5px 5px 80px
+}
+
+.products-detail-grid-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  padding: 60px 80px;
+  background: var(--bg-light);
+  align-items: stretch;
+}
+.grid-one-product-image {
+  background: var(--bg-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.main-image {
+  width: 100%;
+  height: 600px;
+  object-fit: contain;
+  border-radius: var(--radius-md);
+  margin-bottom: 20px;
+}
+.image-thumbnail {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.image-thumbnail img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition:
+    transform 0.2s ease,
+    border 0.2s ease;
+}
+
+.image-thumbnail img:hover {
+  transform: scale(1.05);
+}
+
+.image-thumbnail img.active {
+  border: 2px solid var(--primary-purple);
+}
+
+.grid-two-product-details {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  padding: 40px;
+  background: linear-gradient(145deg, #ffffff, #f7f8fc);
+}
+
+.product-header .product-details-brand {
+  font-weight: 600;
+  color: var(--primary-purple);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  font-size: 36px;
+  /* font-weight: 900; */
+  margin: 10px 0;
+  line-height: 1.2;
+}
+.product-details-product-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  margin-top: 12px;
+  border-radius: 4px;
+  background: var(--primary-gradient);
+}
+
+.product-details-product-title {
+  font-size: 32px;
+  font-weight: 900;
+  margin: 8px 0;
+}
+
+.product-details-category {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.product-details-price-section {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 0;
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.product-details-price-section .old {
+  font-size: 18px;
+  color: var(--text-muted);
+  text-decoration: line-through;
+}
+
+.product-details-price-section .new {
+  font-size: 30px;
+  font-weight: 900;
+  color: var(--primary-purple);
+}
+
+.product-details-description-section h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.product-details-description-section p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.product-details-meta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-light);
+}
+
+.product-details-dimensions h3,
+.product-details-ratings h3 {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.product-details-dimension-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: var(--text-muted);
+}
+.product-details-rating-value {
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--primary-purple);
+}
+
+.product-details-rating-count {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.grid-two-product-details {
+  transition: transform 0.3s ease;
+}
+
+.grid-two-product-details:hover {
+  transform: translateY(-4px);
+}
+
+.action-buttons {
+  margin-top: 30px;
+  padding-top: 25px;
+  border-top: 1px solid var(--border-light);
+  display: flex;
+  gap: 16px;
+}
+
+.action-buttons .button {
+  flex: 1;
+  padding: 14px 0;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: var(--radius-md);
+}
+
+
+@media (max-width: 1024px) {
+  .products-detail-grid-column {
+    grid-template-columns: 1fr;
+    padding: 40px;
+  }
+
+  .main-image {
+    height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-details-meta-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-details-product-title {
+    font-size: 24px;
+  }
+
+  .product-details-price-section .new {
+    font-size: 24px;
+  }
+}

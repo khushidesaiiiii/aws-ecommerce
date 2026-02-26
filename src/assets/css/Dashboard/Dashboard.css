@@ -1,0 +1,96 @@
+.dashboard {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 24px 60px;
+}
+
+.dashboard h2 {
+  margin: 0 0 30px;
+  font-size: 32px;
+  font-weight: 900;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.action-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin: 50px 5px 50px 5px;
+}
+
+.dashboard a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.admin-actions {
+  background: var(--bg-white);
+  border-radius: var(--radius-lg);
+  padding: 34px 28px;
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 160px;
+  text-align: center;
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.admin-actions h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text-dark);
+  -webkit-text-fill-color: initial;
+}
+
+.admin-actions::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--primary-gradient);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  z-index: 0;
+}
+
+.admin-actions h2 {
+  position: relative;
+  z-index: 1;
+}
+
+.admin-actions:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.15);
+}
+
+.admin-actions:hover::before {
+  opacity: 1;
+}
+
+.admin-actions:hover h2 {
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .dashboard {
+    padding: 30px 16px 50px;
+  }
+
+  .dashboard h2 {
+    font-size: 26px;
+  }
+
+  .admin-actions {
+    padding: 26px 20px;
+    min-height: 130px;
+  }
+
+  .admin-actions h2 {
+    font-size: 18px;
+  }
+}

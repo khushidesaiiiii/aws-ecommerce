@@ -1,0 +1,79 @@
+@import "./assets/css/Login/Login.css";
+
+@import "./assets/css/Button/Button.css";
+
+@import "./assets/css/Home/Header.css";
+@import "./assets/css/Home/About.css";
+
+@import "./assets/css/products/ProductCard.css";
+@import "./assets/css/products/Products.css";
+@import "./assets/css/products/Category.css";
+@import "./assets/css/products/ProductDetails.css";
+
+@import "./assets/css/Navbar/Navbar.css";
+
+@import "./assets/css/Footer/Footer.css";
+
+@import "./assets/css/Loader/Loader.css";
+
+@import "./assets/css/Cart/Cart.css";
+
+@import "./assets/css/Order/Order.css";
+@import "./assets/css/Order/AdminOrder.css";
+
+@import "./assets/css/Profile/Profile.css";
+
+@import "./assets/css/Dashboard/Dashboard.css";
+@import './assets/css/ChatBot/ChatBot.css';
+
+@import "./assets/css/Admin-Chats/Admin-chats.css";
+@import "./assets/css/Admin-Chats/AdminChatRoom.css";
+
+:root {
+  --primary-gradient: linear-gradient(135deg, #6a5cff, #3b82f6);
+  --secondary-gradient: linear-gradient(135deg, #6a5cff, #3b82f6);
+  --primary-purple: #6a5cff;
+  --primary-blue: #3b82f6;
+
+  --bg-white: #ffffff;
+  --bg-light: #f7f8fc;
+
+  --text-dark: #1f2937;
+  --text-muted: #6b7280;
+
+  --border-light: #e5e7eb;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+
+  --shadow-soft: 0 10px 25px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", "Poppins", system-ui, sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}

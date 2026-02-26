@@ -1,0 +1,234 @@
+.profile-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px 60px;
+}
+
+.profile-card {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  background: var(--bg-white);
+  padding: 26px 30px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  margin-bottom: 30px;
+}
+
+.profile-avtar img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--bg-light);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.profile-main h2 {
+  margin: 0 0 4px;
+  font-size: 28px;
+  font-weight: 900;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.profile-main p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.profile-warning {
+  margin-top: 10px;
+  color: #ef4444;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.profile-main .button {
+  margin-top: 14px;
+  width: auto;
+  padding: 10px 20px;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 22px;
+}
+
+.info-card {
+  background: var(--bg-white);
+  border-radius: var(--radius-lg);
+  padding: 20px 22px;
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.info-card h4 {
+  margin: 0 0 8px;
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--text-dark);
+}
+
+.info-card p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--text-dark);
+}
+
+.info-card strong {
+  font-weight: 700;
+  color: var(--text-muted);
+  margin-right: 6px;
+}
+
+/* .modal-body {
+  padding: 28px 32px;
+  background: var(--bg-light);
+}
+
+.modal-body .form-group {
+  margin-bottom: 12px;
+}
+
+.modal-body h5 {
+  margin: 18px 0 10px;
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--text-dark);
+}
+
+.modal-body form,
+.modal-body {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px 16px;
+}
+
+.modal-body input,
+.modal-body select,
+.modal-body textarea {
+  width: 100%;
+  padding: 11px 13px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-light);
+  font-size: 14px;
+  background: var(--bg-white);
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.modal-body input:focus,
+.modal-body select:focus,
+.modal-body textarea:focus {
+  outline: none;
+  border-color: var(--primary-purple);
+  box-shadow: 0 0 0 3px rgba(106, 92, 255, 0.15);
+}
+
+.modal-body input[name="bio"],
+.modal-body textarea,
+.modal-body h5 {
+  grid-column: 1 / -1;
+}
+
+.modal-body input[name="street"] {
+  grid-column: span 1;
+}
+
+.modal-body input[name="city"],
+.modal-body input[name="state"],
+.modal-body input[name="country"],
+.modal-body input[name="zip"],
+.modal-body input[name="contact"],
+.modal-body input[name="name"] {
+    grid-column: span 1;
+}
+
+.modal-body input[name="name"] {
+  grid-column: span 2;
+}
+.modal-body input[name="email"] {
+  grid-column: span 2;
+}
+
+@media (max-width: 768px) {
+  .modal-body {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-body input[name="street"] {
+    grid-column: span 1;
+  }
+} */
+
+.modal-footer .button {
+  width: auto;
+  padding: 10px 20px;
+}
+
+.profile-modal-body {
+  padding: 28px 32px;
+  background: var(--bg-light);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px 16px;
+}
+
+.profile-modal-body h5 {
+  grid-column: 1 / -1;
+  margin: 18px 0 10px;
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--text-dark);
+}
+
+.profile-modal-body input,
+.profile-modal-body select,
+.profile-modal-body textarea {
+  width: 100%;
+  padding: 11px 13px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-light);
+  font-size: 14px;
+  background: var(--bg-white);
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.profile-modal-body input:focus,
+.profile-modal-body select:focus,
+.profile-modal-body textarea:focus {
+  outline: none;
+  border-color: var(--primary-purple);
+  box-shadow: 0 0 0 3px rgba(106, 92, 255, 0.15);
+}
+
+.profile-modal-body input[name="name"],
+.profile-modal-body input[name="email"],
+
+.profile-modal-body input[name="bio"] {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 768px) {
+  .profile-modal-body {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .profile-card {
+    flex-direction: column;
+    text-align: center;
+  } 
+
+  .profile-avtar img {
+    width: 90px;
+    height: 90px;
+  }
+}

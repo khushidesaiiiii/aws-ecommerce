@@ -1,0 +1,169 @@
+.signup-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-light);
+  padding: 20px;
+}
+
+.login-card {
+  width: 100%;
+  max-height: 760px;
+  max-width: 520px;
+  background: var(--bg-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  padding: 28px 26px;
+  text-align: center;
+  animation: fadeUp 0.5s ease;
+}
+
+.login-card h2 {
+  font-size: 26px;
+  font-weight: 800;
+  margin-bottom: 12px;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.login-card-img {
+  width: 100%;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+
+.login-card-img img {
+  width: 80%;
+  height: 324px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+.login-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-light);
+  font-size: 14px;
+  transition:
+    border 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.login-card input:focus {
+  outline: none;
+  border-color: var(--primary-purple);
+  box-shadow: 0 0 0 3px rgba(106, 92, 255, 0.15);
+}
+
+/* .login-card button {
+  margin-top: 10px;
+  background: var(--primary-gradient);
+  color: #fff;
+  padding: 12px;
+  border-radius: var(--radius-md);
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.login-card button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(106, 92, 255, 0.35);
+} */
+
+.signup-page > p:last-of-type {
+  margin-top: 18px;
+  /* color: var(--text-muted); */
+  color: #ef4444;
+  text-align: center;
+}
+
+.signup-page span {
+  color: var(--primary-purple);
+  font-weight: 600;
+  cursor: pointer;
+  margin: 0 4px;
+  font-style: italic;
+}
+
+.signup-page > p:last-of-type button {
+  background: none;
+  color: var(--primary-purple);
+  font-weight: 600;
+  padding: 0;
+  margin-left: 6px;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1024px) {
+  .login-card {
+    max-width: 480px;
+    padding: 26px 22px;
+  }
+
+  .login-card-img img {
+    height: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .signup-page {
+    padding: 18px 14px;
+  }
+
+  .login-card {
+    max-width: 420px;
+    padding: 24px 20px;
+  }
+
+  .login-card h2 {
+    font-size: 24px;
+  }
+
+  .login-card-img img {
+    width: 90%;
+    height: 220px;
+  }
+
+  .login-card input {
+    padding: 11px 12px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-card {
+    padding: 22px 18px;
+  }
+
+  .login-card-img img {
+    height: 160px;
+  }
+
+  .login-card h2 {
+    font-size: 22px;
+  }
+}
