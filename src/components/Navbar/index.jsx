@@ -30,10 +30,6 @@ export default function Navbar() {
     return () => subscription.unsubscribe();
   }, [dispatch]);
 
-  // subscribeToCart((data) => {
-  //   console.log("SUB UPDATE:", data);
-  // });
-
   const handleLogout = () => {
     if (user) {
       dispatch(logout());
