@@ -5,8 +5,8 @@ Amplify.configure({
   ...awsconfig,
   Auth: {
     Cognito: {
-      userPoolId: awsconfig.aws_user_pools_id,
-      userPoolClientId: awsconfig.aws_user_pools_web_client_id,
+      userPoolId: import.meta.env.VITE_COGNITO_USER_POOL_ID,
+      userPoolClientId: import.meta.env.VITE_COGNITO_CLIENT_ID,
       loginWith: {
         username: true,
       },
