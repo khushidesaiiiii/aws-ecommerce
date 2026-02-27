@@ -28,9 +28,7 @@ export default function Header() {
   function handleNavigate() {
     navigate("/category");
   }
-  const handleDownload = (elementId, fileName) => {
-    pdfDownloadHelper(elementId, fileName);
-  };
+
   return (
     <>
       <div className="header" id="homePage">
