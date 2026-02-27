@@ -52,6 +52,31 @@ This project demonstrates real-world architecture using cloud services, state ma
 * **Real-time Subscriptions**
 
 ---
+## Live Demo 
+
+url: https://main.d1kusytxhghfnb.amplifyapp.com/
+
+---
+## 🔑 Demo Credentials (DummyJSON)
+
+You can use any DummyJSON test users.
+
+### 👨‍💼 Admin
+
+```
+Username: emilys
+Password: emilyspass
+```
+
+### 👤 User
+
+```
+create your own userId and password with a valid email
+--> Use valid email as user needs to confirm and verify there email
+
+```
+
+---
 ## Screenshots
 
 <img width="1349" height="605" alt="image" src="https://github.com/user-attachments/assets/ec1b338c-0b5b-4881-86d1-5bd9be2c325a" />
