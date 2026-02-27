@@ -50,7 +50,6 @@ export const pdfDownloadHelper = async (elementId, fileName="exampleFile") => {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ html,
-        // mergeUrl : "https://www.internationalphoneticassociation.org/sites/default/files/IPA_Kiel_2015.pdf",
        }),
     },
   );

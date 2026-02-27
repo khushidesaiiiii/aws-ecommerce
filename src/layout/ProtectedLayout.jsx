@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import Navbar from "../components/Navbar/index";
 import { Navigate, Outlet } from "react-router-dom";
-import Footer from "../components/Footer/Footer";
+import Footer from "../components/Footer/index";
 
 export default function ProtectedLayout({ allowedRoles }) {
   const { userRole, user, loading } = useSelector((state) => state.auth);

@@ -4,7 +4,7 @@ import { ToastContainer } from "react-toastify";
 import PublicLayout from "./layout/PublicLayout";
 import NoNavbarFooter from "./layout/NoNavbarFooter";
 
-import Home from "./pages/Home/Home";
+import Home from "./pages/Home/index";
 import Login from "./pages/Auth/Login";
 import Signup from "./pages/Auth/Signup";
 import ConfirmSignup from "./pages/Auth/ConfirmSignup";

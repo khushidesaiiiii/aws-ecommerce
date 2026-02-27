@@ -1,7 +1,7 @@
 import { getCurrentUser } from "aws-amplify/auth";
 import { getUserProducts } from "../../api/products.api";
 import Loader from "../../components/Loader";
-import ProductCard from "../../components/ProductCard/ProductCard";
+import ProductCard from "../../components/ProductCard/index";
 
 export default function Products() {
   // getCurrentUser()
