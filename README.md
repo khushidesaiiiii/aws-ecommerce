@@ -64,7 +64,7 @@ You can use these as test users.
 ### 👨‍💼 Admin
 
 ```
-Username: admin@excample.com
+Username: admin@example.com
 Password: Admin@1234
 ```
 
