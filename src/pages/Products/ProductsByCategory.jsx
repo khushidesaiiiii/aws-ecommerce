@@ -1,6 +1,6 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { useProductsByCategory } from "../../api/products.api";
-import ProductCard from "../../components/ProductCard/ProductCard";
+import ProductCard from "../../components/ProductCard/index";
 import { getBackgroundImage } from "../../assets/images/category/CategoryImages";
 import Button from "../../UI/Button";
 

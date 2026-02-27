@@ -44,7 +44,7 @@ export const UpdateOrderStatus = async (orderId, status) => {
     query: updateOrderStatus,
     variables: { orderId, status },
   });
-  console.log("update status res:", res);
+  //console.log("update status res:", res);
   return res.data?.updateOrderStatus ?? null;
 };
 

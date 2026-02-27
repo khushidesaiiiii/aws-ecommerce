@@ -28,9 +28,7 @@ export default function Header() {
   function handleNavigate() {
     navigate("/category");
   }
-  const handleDownload = (elementId, fileName) => {
-    pdfDownloadHelper(elementId, fileName);
-  };
+
   return (
     <>
       <div className="header" id="homePage">
@@ -47,9 +45,6 @@ export default function Header() {
             shopping your needs and cater your wants.
           </p>
           <Button onClick={handleNavigate}>View Product Catalouge</Button>
-          <Button onClick={() => handleDownload("homePage", "homepage")}>
-            Download Page
-          </Button>
         </div>
         <div className="image-slideshow"> 
             <img src={images[currentIndex]} alt="Clothes Image" className="img" />
