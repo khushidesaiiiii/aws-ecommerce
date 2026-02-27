@@ -57,15 +57,15 @@ This project demonstrates real-world architecture using cloud services, state ma
 url: https://main.d1kusytxhghfnb.amplifyapp.com/
 
 ---
-## 🔑 Demo Credentials (DummyJSON)
+## 🔑 Demo Credentials 
 
-You can use any DummyJSON test users.
+You can use these as test users.
 
 ### 👨‍💼 Admin
 
 ```
-Username: emilys
-Password: emilyspass
+Username: admin@excample.com
+Password: Admin@1234
 ```
 
 ### 👤 User
