@@ -1,10 +1,13 @@
 import { toast } from "react-toastify";
 
-export const pdfDownloadHelper = async (elementId, fileName="exampleFile") => {
+export const pdfDownloadHelper = async (
+  elementId,
+  fileName = "exampleFile",
+) => {
   const element = document.getElementById(elementId);
 
   if (!element) {
-    toast.error("Failed to download Invoice");  
+    toast.error("Failed to download Invoice");
     return;
   }
 
@@ -29,12 +32,14 @@ export const pdfDownloadHelper = async (elementId, fileName="exampleFile") => {
     
           <!-- Bootstrap (Reactstrap dependency) -->
           <link rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-    
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+          <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600&display=swap" rel="stylesheet">
           <!-- YOUR APP CSS VARIABLES + STYLES -->
           <style>
             ${cssText}
-            
+            body {
+  font-family: "Noto Sans", sans-serif,  "Inter", "Poppins", system-ui;
+}
           </style>
         </head>
     
@@ -49,8 +54,7 @@ export const pdfDownloadHelper = async (elementId, fileName="exampleFile") => {
     {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ html,
-       }),
+      body: JSON.stringify({ html }),
     },
   );
 
