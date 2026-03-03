@@ -107,8 +107,8 @@ Includes a fully functional customer support system:
 ### 1️⃣ Clone Repository
 
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/khushidesaiiiii/aws-ecommerce.git
+cd aws-ecommerce
 ```
 
 ---
