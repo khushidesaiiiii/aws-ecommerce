@@ -134,7 +134,7 @@ amplify pull
 ### 4️⃣ Run Development Server
 
 ```bash
-npm start
+npm run dev
 ```
 
 App will run on:
