@@ -164,6 +164,98 @@ Optimized for:
 
 ---
 
+# 🔄 CI/CD Documentation
+
+## 📌 CI/CD Overview
+
+This project uses **Git-based Continuous Integration and Continuous Deployment (CI/CD)** with AWS Amplify.
+
+Whenever code is pushed to the connected GitHub branch, AWS Amplify automatically:
+
+1. Clones the repository
+2. Installs dependencies (`npm install`)
+3. Builds the application (`npm run build`)
+4. Deploys the production-ready build
+5. Hosts the app using AWS CloudFront
+
+This ensures automatic deployment without manual steps.
+
+---
+
+## 🏗️ CI/CD Architecture
+
+```
+Developer → GitHub → AWS Amplify → CloudFront CDN → End Users
+```
+
+---
+
+## 🌿 Branch Strategy
+
+| Branch  | Environment | Purpose                |
+| ------- | ----------- | ---------------------- |
+| dev     | Development | Testing new features   |
+| staging | Staging     | Pre-production testing |
+| main    | Production  | Live application       |
+
+Each branch triggers a separate deployment environment.
+
+---
+
+## ⚙️ Build Configuration
+
+Amplify uses the following build process:
+
+```yaml
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - npm install
+    build:
+      commands:
+        - npm run build
+  artifacts:
+    baseDirectory: dist
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - node_modules/**/*
+```
+
+---
+
+## 🔐 Environment Variables
+
+Environment variables are configured inside AWS Amplify Console.
+
+Example variables:
+
+* VITE_APPSYNC_URL
+* VITE_APPSYNC_API_KEY
+* VITE_COGNITO_USER_POOL_ID
+* VITE_COGNITO_CLIENT_ID
+
+These variables are injected securely during build time.
+
+Local `.env` files are not used in production deployment.
+
+---
+
+## 🚀 Deployment Workflow
+
+1. Developer pushes code to GitHub.
+2. Amplify detects changes.
+3. Amplify runs automated build.
+4. Build artifacts are deployed.
+5. CloudFront distributes content globally.
+
+No manual deployment required.
+
+---
+
 ## 🔮 Future Improvements
 
 * Online payments integration
