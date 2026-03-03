@@ -23,7 +23,6 @@ import Order from "./pages/Order/Order";
 import Dashboard from "./pages/Admin/Dashboard";
 import AdminOrders from "./pages/Admin/Admin-Orders/OrdersPage";
 import Profile from "./pages/Profile/Profile";
-import Chat from "./pages/Chat/Chat";
 import AdminChats from "./pages/Admin/Admin-chats/index";
 import ChatBot from "./components/Chat";
 import AdminChatRoom from "./pages/Admin/Admin-chats/AdminChatRoom";
