@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getUserOrders, updateOrdStatus } from "../../redux/orderSlice";
 import Button from "../../UI/Button";
@@ -11,6 +12,7 @@ import {
 
 export default function Order() {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   useEffect(() => {
     dispatch(getUserOrders());
@@ -51,6 +53,10 @@ export default function Order() {
   // console.log("orders in render:", orders);
   // console.log("isArray:", Array.isArray(orders));
 
+  const handleNavigateProduct = (productId) => {
+    navigate(`/product/${productId}`);
+  };
+
   if (loading) return <Loader />;
   if (error) return <p>Something went wrong</p>;
 
@@ -68,6 +74,7 @@ export default function Order() {
           return (
             <div className="order-card" key={ord.orderId}>
               <h3>Order ID: {ord.orderId}</h3>
+              <p>Ordered By: {ord.address.name}</p>
               <p>
                 <span className={`order-status ${ord.status?.toLowerCase()}`}>
                   {ord.status}
@@ -78,7 +85,11 @@ export default function Order() {
                   <p>No products found</p>
                 ) : (
                   products.map((p) => (
-                    <div className="ordered-product-card" key={p.productId}>
+                    <div
+                      className="ordered-product-card"
+                      key={p.productId}
+                      onClick={() => handleNavigateProduct(p.productId)}
+                    >
                       <div className="pro-image">
                         <img src={p.thumbnail} alt={p.name} />
                       </div>
